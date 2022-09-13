@@ -26,7 +26,7 @@
 
 **1）Kali linux**
 
-![img](1. Build attack and target aircraft environments.assets/wps1.jpg) 
+![img](img/wps1.jpg) 
 
 Figure 1.1 Kali linux   installation completed
 
@@ -40,7 +40,7 @@ Figure 1.1 Kali linux   installation completed
 
 **2）Windows server 2008 R2**
 
-![img](1. Build attack and target aircraft environments.assets/wps2.jpg) 
+![img](img/wps2.jpg) 
 
 Figure 1.2 Windows 2008 installation completed
 
@@ -50,7 +50,7 @@ Figure 1.2 Windows 2008 installation completed
 
 First check the IP address of Kali linux
 
-![img](1. Build attack and target aircraft environments.assets/wps3.jpg) 
+![img](img/wps3.jpg) 
 
 Figure 1.3 IP address of Kali machine
 
@@ -58,7 +58,7 @@ Figure 1.3 IP address of Kali machine
 
 Kali machine ping through the target machine
 
-![img](1. Build attack and target aircraft environments.assets/wps4.jpg) 
+![img](img/wps4.jpg) 
 
 Figure 1.4 Kali machine Ping through the target machine
 
@@ -70,7 +70,7 @@ Figure 1.4 Kali machine Ping through the target machine
 
 Target machine Ping through Kali machine
 
-![img](1. Build attack and target aircraft environments.assets/wps5.jpg) 
+![img](img/wps5.jpg) 
 
 Figure 1.5 Target machine Ping through Kali machine
 
@@ -98,7 +98,7 @@ A: Use a browser to test if you can access the Internet normally or use the ping
 
 A: Kali machine: 00 : 0c : 29 : 6d : 61 :17
 
-![img](1. Build attack and target aircraft environments.assets/wps7.jpg) 
+![img](img/wps7.jpg) 
 
 Figure 1.6 kali machine Ethernet address
 
@@ -106,7 +106,7 @@ Figure 1.6 kali machine Ethernet address
 
 Windows server 2008：00-0c-29-64-DE-1E
 
-![img](1. Build attack and target aircraft environments.assets/wps8.jpg) 
+![img](img/wps8.jpg) 
 
 Figure 1.8 Target machine Ethernet address
 
