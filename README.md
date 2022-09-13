@@ -1,20 +1,112 @@
-**The following is a general description of each experiment.**
-
-1. **Environment construction:** Build the attack machine and target machine environment in virtual machine, the attack machine is Kali OS, the target machine is windows 2008 OS, use various tools of Kali to attack the target machine, and observe the real-time ip change of the attack machine and target machine.
-
-2. **Wireshark packet sniffing and analysis:** Use the protocol analysis tool Wireshark to capture and analyze the IP datagram packet format, and visualize the specific transmission process of the data. Analyze the captured packets to consolidate the knowledge of Ethernet II packets, ARP packets and IP and ICMP packets. Intercept TCP packet header information and understand that the fields in the header such as serial number and acknowledgement number are the basis of a reliable TCP connection. Understand the TCP connection establishment and release mechanism by analyzing the three handshake establishment and release process of Wireshark connections. Use Wireshark to listen to ICMP packets, analyze the main functions of the ping program and tracert program, and analyze the interrelationship between its MAC frames, IP packets, and ICMP packets for any ICMP packet caught. Use Wireshark to listen to arp packets and analyze the contents of arp request and reply packets.
+### 1. Build attack and target aircraft environments
 
 
-3. **Use Nmap command tool to scan network protocols:** use Nmap command tool to scan network protocols (TCP/TCP indirect/UDP), use netstat, arp, nslookup commands to view network status.
+
+##### **一、** Purpose of the experiment
+
+1）Learn to build a simple offensive and defensive environment in a computer.
+
+2）This experiment is designed to provide students with a better understanding of the various roles of network attack and defense techniques and to master the environment of attack and target machines.
 
 
-4. **Using driftnet to intercept image data stream:** learn to enable linux virtual machine configuration kali in Windows system and use kali tool ettercap to implement real ARP spoofing operation and can actually intercept the image data stream of the attacking machine. In-depth understanding of the basic operation of computer network ARP spoofing attack, master the principle and efficacy of computer network ARP attack.
+
+##### **二、**Experimental content and requirements
+
+1、Install VMware.
+
+2、Install Kali operating system in VMware and mark it as the attack machine.
+
+3、Install windows 2008 operating system in VMware and mark it as the target machine.
+
+4、Use the ping command to check the ip of the attacking machine and the target machine.
 
 
-5. **Realize phishing:** learn to enable linux virtual machine configuration windows 2008 in Windows system and use kali tool ettercap to realize real DNS spoofing operation and be able to do real phishing. Understand the basic operation of DNS spoofing attacks on computer networks, implement DNS spoofing + website cloning to achieve website phishing attacks, and use social engineering attack tools.
+
+##### **三、** Experimental results
+
+**1）Kali linux**
+
+![img](1. Build attack and target aircraft environments.assets/wps1.jpg) 
+
+Figure 1.1 Kali linux   installation completed
+
+ 
+
+ 
+
+ 
+
+ 
+
+**2）Windows server 2008 R2**
+
+![img](1. Build attack and target aircraft environments.assets/wps2.jpg) 
+
+Figure 1.2 Windows 2008 installation completed
+
+ 
+
+**3）Using the ping command to check the ip of the attacking and target machines**
+
+First check the IP address of Kali linux
+
+![img](1. Build attack and target aircraft environments.assets/wps3.jpg) 
+
+Figure 1.3 IP address of Kali machine
 
 
-6. **denial of service attacks:** learn the principles of denial of service attacks. Install siege & t50 on the attacking machine to perform distributed denial of service attack on the target machine; master some usage of hping3, siege and t50, and think about the possibility of using it as a DDOS attack. Finally, run wireshark on the attack machine and listen to the TCP protocol of the target machine.
 
+Kali machine ping through the target machine
 
-7. **buffer overflow attack:** learn the principle of buffer overflow attack. A buffer overflow is a situation where a program attempts to write data to a buffer beyond a pre-allocated fixed length. This vulnerability can be exploited by a malicious user to alter the flow control of a program or even execute arbitrary pieces of code. This vulnerability occurs due to a temporary shutdown of the data buffer and return address, and the overflow can cause the return address to be rewritten. The buffer overflow attack is implemented in the Kali machine using the given shellcode and exploit.c.
+![img](1. Build attack and target aircraft environments.assets/wps4.jpg) 
+
+Figure 1.4 Kali machine Ping through the target machine
+
+ 
+
+ 
+
+ 
+
+Target machine Ping through Kali machine
+
+![img](1. Build attack and target aircraft environments.assets/wps5.jpg) 
+
+Figure 1.5 Target machine Ping through Kali machine
+
+ 
+
+ 
+
+##### **四、** Experimental experience
+
+The Kali machine and the target machine Win2008 were previously installed in VMWare for the corresponding experiments, so the basic configuration is still in place. Here the two virtual machines network mode is selected NAT mode.
+
+ 
+
+##### **五、**Questions and Discussions
+
+1. How to test if there is a fault in the connection from your host to a specific URL? If there is a failure, how to further analyze the cause of the failure?
+
+A: Use a browser to test if you can access the Internet normally or use the ping command to test if you can ping the host or a specific URL (i.e., the network is connected). If there is a connection, pinging the specific URL should receive a response packet and have data displayed. If there is packet loss or the host is not found, the connection is faulty. Wrong IP address setting; the other party is not in the same network segment with itself, and cannot find the other party through the route, but sometimes the other party does exist, and of course does not exist is also returned a timeout message; the other party does exist, but set ICMP packet filtering (such as firewall settings).
+
+ 
+
+ 
+
+2. What are the Ethernet addresses of the two Vmware machines?
+
+A: Kali machine: 00 : 0c : 29 : 6d : 61 :17
+
+![img](1. Build attack and target aircraft environments.assets/wps7.jpg) 
+
+Figure 1.6 kali machine Ethernet address
+
+ 
+
+Windows server 2008：00-0c-29-64-DE-1E
+
+![img](1. Build attack and target aircraft environments.assets/wps8.jpg) 
+
+Figure 1.8 Target machine Ethernet address
+
